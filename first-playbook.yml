@@ -5,13 +5,13 @@
   tasks:
   - name: "Install apache webserver"
     package:
-      name: "apache2"
+      name: "{{ apache_package }}"
       state: "present"
     become: True
 
   - name: "Start apache webserver"
     service:
-      name: "apache2.service"
+      name: "{{ apache.service }}"
       state: "started"
     become: True
 ...
