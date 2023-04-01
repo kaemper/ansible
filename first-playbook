@@ -1,6 +1,6 @@
 ---
 - name: "My first playbook"
-  hosts: my-machines
+  hosts: my_machines
 
   tasks:
   - name: "Install apache webserver"
