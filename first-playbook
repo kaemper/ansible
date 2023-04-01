@@ -1,3 +1,17 @@
 ---
+- name: "My first playbook"
+  hosts: my-machines
 
+  tasks:
+  - name: "Install apache webserver"
+    package:
+      name: "apache2"
+      state: "present"
+    become: True
+
+  - name: "Start apache webserver"
+    service:
+      name: "apache2.service"
+      state: "started"
+    become: True
 ...
